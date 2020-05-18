@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">TraceMe</string>
+
+    //activity_main
+    <string name="update_health_info">Update Health Information</string>
+    <string name="view_health_record">View Health Records</string>
+
+    //activity_new_health
+    <string name="health_update">Health Update</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="feel_well">I feel well</string>
+    <string name="feel_unwell">I feel unwell</string>
+    <string name="temp">Temperature</string>
+    <string name="submit">Submit</string>
+    <string name="signs">Signs and Symptoms (check all that apply):</string>
+    <string name="fever">Fever</string>
+    <string name="fatigue">Fatigue</string>
+    <string name="chills">Chills</string>
+    <string name="pain">Muscle Pain</string>
+    <string name="cough">Cough</string>
+    <string name="taste">Loss of Taste or Smell</string>
+    <string name="breath">Difficulty Breathing</string>
+    <string name="headache">Headache</string>
+    <string name="throat">Sore Throat</string>
+
+    \\activity_old_health
+    <string name="health_records">Health Records</string>
+    <string name="search">Search</string>
+
+</resources>
