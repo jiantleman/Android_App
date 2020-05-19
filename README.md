@@ -35,21 +35,24 @@ This is the activity where users can update their health information. They can s
 
 ### 2.3 View Health Records Activity <a name="oldHealth"></a>
 This is the activity where users can view their submitted records. Clicking the "Clear all data" button deletes all records from the database. When users subsequently click the "View Health Records" button from the main page, the see a message indicating that there is no existing records.
-<p align="center">
-<img src="https://github.com/jiantleman/Android_App/blob/master/media/oldHealth.png?raw=true width="250" /> <img src="https://github.com/jiantleman/Android_App/blob/master/media/oldHealth_delete.png?raw=true width="250" />
-</p>
+<table><tr>
+<td><img src="https://github.com/jiantleman/Android_App/blob/master/media/oldHealth.png?raw=true width="250" /> 
+<td><img src="https://github.com/jiantleman/Android_App/blob/master/media/oldHealth_delete.png?raw=true width="250" />
+</tr></table>
 
 ### 2.4 Resources and Information Activity <a name="resources"></a>
 This activity provides a drop down list of various resources that the user can view. When a resource is selected, a webpage is displayed with the useful information.
-<p align="center">
-<img src="https://github.com/jiantleman/Android_App/blob/master/media/resources.png?raw=true width="250" /> <img src="https://github.com/jiantleman/Android_App/blob/master/media/resources_select.png?raw=true width="250" />
-</p>
+<table><tr>
+<td><img src="https://github.com/jiantleman/Android_App/blob/master/media/resources.png?raw=true width="250" /> 
+<td><img src="https://github.com/jiantleman/Android_App/blob/master/media/resources_select.png?raw=true width="250" />
+</tr></table>
 
 ### 2.5 Get Help Activity <a name="help"></a>
 This activity provides a list of useful numbers that the user can call. Clicking on the number launches the call application with the number entered.
-<p align="center">
-<img src="https://github.com/jiantleman/Android_App/blob/master/media/help.png?raw=true width="250" /> <img src="https://github.com/jiantleman/Android_App/blob/master/media/help.dial.png?raw=true width="250" />
-</p>
+<table><tr>
+<td><img src="https://github.com/jiantleman/Android_App/blob/master/media/help.png?raw=true width="250" /> 
+<td><img src="https://github.com/jiantleman/Android_App/blob/master/media/help.dial.png?raw=true width="250" />
+</tr></table>
 
 ## 3. Demonstration <a name="demo"></a>
 The following gif shows a full demonstration of the application features:
