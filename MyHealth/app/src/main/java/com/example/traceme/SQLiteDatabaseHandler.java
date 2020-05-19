@@ -5,11 +5,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * The SQLiteDatabaseHandler class is a subclass of SQLiteOpenHandler, and provides functions for
+ * creating, querying and modifying the SQL Database.
+ */
 public class SQLiteDatabaseHandler extends SQLiteOpenHelper {
 
     private static final int DB_VERSION = 1;
@@ -23,10 +26,13 @@ public class SQLiteDatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_SIGNS = "signs";
     private static final String[] COLUMNS = {KEY_ID, KEY_DATE, KEY_TIME, KEY_TEMP, KEY_WELL, KEY_SIGNS};
 
-    public SQLiteDatabaseHandler(Context context){
+    SQLiteDatabaseHandler(Context context){
         super(context, DB_NAME, null, DB_VERSION);
     }
 
+    /**
+     * Create an SQL table with the column names and types
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + KEY_ID +
@@ -36,20 +42,35 @@ public class SQLiteDatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE);
     }
 
+    /**
+     *
+     * @param db SQL database
+     * @param oldVersion old version number
+     * @param newVersion new version number
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         this.onCreate(db);
     }
 
-    public void deleteOne(Record record) {
+    /**
+     * Deletes record from the table
+     * @param record Record to be deleted
+     */
+    void deleteOne(Record record) {
         // Get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, "id = ?", new String[] { String.valueOf(record.getId()) });
         db.close();
     }
 
-    public Record getRecord(int id) {
+    /**
+     * Retrieves record from the table
+     * @param id id of the record
+     * @return Record
+     */
+    Record getRecord(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, // a. table
                 COLUMNS, // b. column names
@@ -74,7 +95,11 @@ public class SQLiteDatabaseHandler extends SQLiteOpenHelper {
         return record;
     }
 
-    public List<Record> allRecords() {
+    /**
+     * Gets the list of all records from the table
+     * @return List of Records
+     */
+    List<Record> allRecords() {
 
         List<Record> recordsList = new LinkedList<Record>();
         String query = "SELECT  * FROM " + TABLE_NAME;
@@ -98,7 +123,11 @@ public class SQLiteDatabaseHandler extends SQLiteOpenHelper {
         return recordsList;
     }
 
-    public void addRecord(Record record) {
+    /**
+     * Adds a record to the SQL table
+     * @param record Record to be added
+     */
+    void addRecord(Record record) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_DATE, record.getDate());

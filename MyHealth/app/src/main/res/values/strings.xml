@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">TraceMe</string>
+    <string name="app_name">MyHealth</string>
 
     //activity_main
     <string name="update_health_info">Update Health Information</string>
     <string name="view_health_record">View Health Records</string>
+    <string name="resources">Resources and Information</string>
+    <string name="help">Get Help</string>
 
     //activity_new_health
     <string name="health_update">Health Update</string>
@@ -26,6 +28,25 @@
 
     \\activity_old_health
     <string name="health_records">Health Records</string>
-    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="clear">Clear all data</string>
+
+    \\activity_resources
+    <string-array name="resources_array">
+        <item>Symptoms of Coronavirus</item>
+        <item>How to Protect Yourself &amp; Others</item>
+        <item>What to Do If You Are Sick</item>
+        <item>Frequently Asked Questions</item>
+    </string-array>
+    <string name="select_resource">Select resource</string>
+
+    \\activity_help
+    <string name="moh">For general queries, call the Ministry of Health Hotline:</string>
+    <string name="care">For emotional or psychological support, call the National Care Hotline:</string>
+    <string name="shn">For queries regarding Stay-Home Notice, call:</string>
+    <string name="moh_no">1800 333 9999</string>
+    <string name="care_no">1800 6202 6868</string>
+    <string name="shn_no">6812 5555</string>
+
 
 </resources>
